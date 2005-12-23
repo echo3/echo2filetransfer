@@ -116,6 +116,7 @@ implements DomUpdateSupport, ActionProcessor, PropertyUpdateProcessor, Component
                 FileInputStream in = new FileInputStream(event.getFile());
                 uploadSelect.fileUpload(in, event.getFileSize(), event.getContentType(), event.getFileName());
                 event.getFile().delete();
+                deactivateUploadSelect(uploadSelect);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
