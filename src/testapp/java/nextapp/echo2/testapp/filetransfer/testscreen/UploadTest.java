@@ -29,6 +29,8 @@
 
 package nextapp.echo2.testapp.filetransfer.testscreen;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.TooManyListenersException;
 
 import nextapp.echo2.app.Color;
@@ -73,8 +75,51 @@ public class UploadTest extends SplitPane {
                     app.consoleWrite("ContentType = " + e.getContentType());
                     app.consoleWrite("FileName = " + e.getFileName());
                     app.consoleWrite("Size = " + e.getSize());
+                    
+                    int totalBytesRead = 1; // offset -1 returned when no more bytes available.
+                    InputStream in = e.getInputStream();
+                    try {
+                        byte[] data = new byte[16];
+                        int bytesRead = in.read(data);
+                        totalBytesRead += bytesRead;
+                        while (bytesRead != -1) {
+                            if (totalBytesRead < 1024) {
+                                StringBuffer out = new StringBuffer();
+                                for (int i = 0; i < bytesRead; ++i) {
+                                    int value = data[i] & 0xff;
+                                    if (value < 0x10) {
+                                        out.append("0");
+                                    }
+                                    out.append(Integer.toString(value, 16));
+                                    out.append(' ');
+                                }
+                                for (int i = bytesRead; i < 16; ++i) {
+                                    out.append("   ");
+                                }
+                                out.append(" | ");
+                                for (int i = 0; i < bytesRead; ++i) {
+                                    if (data[i] >= 32 && data[i] <= 126) {
+                                        out.append((char) data[i]);
+                                    } else {
+                                        out.append(' ');
+                                    }
+                                }
+                                app.consoleWrite(out.toString());
+                            }
+                            bytesRead = in.read(data);
+                            totalBytesRead += bytesRead;
+                        }
+                    } catch (IOException ex) {
+                        app.consoleWrite(ex.toString());
+                    } finally {
+                        try {
+                            in.close();
+                        } catch (IOException ex) {
+                            app.consoleWrite(ex.toString());
+                        }
+                    }
+                    app.consoleWrite("InputStream Bytes Read = " + totalBytesRead);
                 }
-            
             });
         } catch (TooManyListenersException ex) {
             throw new RuntimeException(ex);
