@@ -98,12 +98,12 @@ implements MultipartUploadSPI, Serializable {
         File file = new File(TEMPDIR_PATH + "/" + System.currentTimeMillis() + uploadSelect.getRenderId() + ".tmp");
         FileOutputStream out = new FileOutputStream(file);
         
-        int byteOffset = 0;
         byte[] buffer = new byte[1024];
         
-        while(byteOffset >= 0) {
-            byteOffset = in.read(buffer);
-            out.write(buffer);
+        int bytesRead = in.read(buffer);
+        while(bytesRead >= 0) {
+            out.write(buffer, 0, bytesRead);
+            bytesRead = in.read(buffer);
         }
         
         in.close();
