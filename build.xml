@@ -37,6 +37,7 @@
     <patternset id="fileset.resources">
         <include name="**/*properties"/>
         <include name="**/*html"/>
+        <include name="**/*pdf"/>
         <include name="**/*js"/>
         <include name="**/*gif"/>
         <include name="**/*jpg"/>

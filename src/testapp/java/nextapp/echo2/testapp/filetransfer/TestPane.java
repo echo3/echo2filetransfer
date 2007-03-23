@@ -107,6 +107,8 @@ public class TestPane extends ContentPane {
 
         addTest("File Upload", "UploadTest");
         
+        addTest("File Pane", "FilePaneTest");
+        
         Column applicationControlsColumn = new Column();
         controlsColumn.add(applicationControlsColumn);
 
