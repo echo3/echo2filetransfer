@@ -262,17 +262,21 @@
         </copy>
         
         <!-- Documentation -->
+<!--FIXME	
         <copy todir="${dir.build.release.root}/Documentation/api/public">
             <fileset dir="${dir.javadoc.public}"/>
         </copy>
         <copy todir="${dir.build.release.root}/Documentation">
             <fileset dir="${dir.resource}/Documentation"/>
         </copy>
+-->	
         
         <!-- Licensing -->
+<!--FIXME
         <copy todir="${dir.build.release.root}/Licensing">
             <fileset dir="${dir.resource}/Licensing"/>
         </copy>
+-->	
         
         <!-- Zip & TarGz -->
         <mkdir dir="${dir.release}"/>
