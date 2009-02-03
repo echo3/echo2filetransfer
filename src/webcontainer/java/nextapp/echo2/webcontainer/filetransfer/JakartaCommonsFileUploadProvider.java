@@ -1,6 +1,6 @@
 /*
  * This file is part of the Echo File Transfer Library (hereinafter "EFTL").
- * Copyright (C) 2002-2005 NextApp, Inc.
+ * Copyright (C) 2002-2009 NextApp, Inc.
  * 
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  * 

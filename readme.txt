@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------
 Echo Web Application Framework, version 2.0 (Echo2)
 File Transfer Library
-Copyright (C) 2002-2005 NextApp, Inc.
+Copyright (C) 2002-2009 NextApp, Inc.
 
-http://www.nextapp.com/platform/echo2/echo
+http://echo.nextapp.com
 
 ----------------------------------------------------------------------
 Echo is licensed under the Mozilla Public License.
