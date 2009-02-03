@@ -181,7 +181,7 @@
     <target name="doc.webcontainer"
             description="Create public/protected JavaDoc Document for Echo File Transfer Web Container">
         <mkdir dir="${dir.javadoc.webcontainer.public}"/>
-        <javadoc sourcepath="${dir.src.webcontainer}" 
+        <javadoc sourcepath="${dir.src.app};${dir.src.webcontainer}" 
 	            packagenames="nextapp.echo2.webcontainer.filetransfer*" 
                 stylesheetfile="${javadoc.cssfile}"
                 destdir="${dir.javadoc.webcontainer.public}" 
