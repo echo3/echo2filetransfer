@@ -42,7 +42,7 @@ public interface UploadListener extends EventListener {
     public void fileUpload(UploadEvent e);
     
     /**
-     * Indicates an unsucessful file upload attempt.
+     * Indicates an unsuccessful file upload attempt.
      */
     public void invalidFileUpload(UploadEvent e);
 }

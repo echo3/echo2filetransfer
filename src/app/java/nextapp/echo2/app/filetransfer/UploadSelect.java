@@ -77,11 +77,11 @@ public class UploadSelect extends Component {
     /**
      * Notifies the upload listener that a file has been uploaded.
      * 
-     * @param in The inputstream containing the file.
-     * @param size The length of the input stream.
-     * @param contentType The content type of the uploaded file.
-     * @param filename The name of the file, as specified by the client 
-     *        uploading it.
+     * @param in the <code>InputStream</code> containing the file
+     * @param size the length of the input stream
+     * @param contentType the content type of the uploaded file
+     * @param filename the name of the file, as specified by the client 
+     *        uploading it
      */
     public void fileUpload(InputStream in, int size, String contentType, String filename) {
         if (uploadListener != null) {
@@ -97,7 +97,7 @@ public class UploadSelect extends Component {
     /**
      * Returns the height of the upload select component.
      *
-     * @return the height of the upload select component.
+     * @return the height of the upload select component
      */
     public Extent getHeight() {
         return (Extent)getProperty(PROPERTY_HEIGHT);
@@ -106,8 +106,8 @@ public class UploadSelect extends Component {
     /**
      * Returns text displayed in &quot;Send&quot; button when it is disabled.
      * 
-     * @return The text displayed in &quot;Send&quot; button when it is 
-     *         disabled.
+     * @return the text displayed in &quot;Send&quot; button when it is 
+     *         disabled
      */
     public String getDisabledSendButtonText() {
         return (String)getProperty(PROPERTY_DISABLED_SEND_TEXT);
@@ -116,8 +116,8 @@ public class UploadSelect extends Component {
     /**
      * Returns text displayed in &quot;Send&quot; button when it is enabled.
      * 
-     * @return The text displayed in &quot;Send&quot; button when it is 
-     *         enabled.
+     * @return the text displayed in &quot;Send&quot; button when it is 
+     *         enabled
      */
     public String getEnabledSendButtonText() {
         return (String)getProperty(PROPERTY_ENABLED_SEND_TEXT);
@@ -127,8 +127,8 @@ public class UploadSelect extends Component {
      * Returns the upload listener that will process file uploads when they 
      * occur.
      *
-     * @return The upload listener that will process file uploads when they
-     * occur.
+     * @return the upload listener that will process file uploads when they
+     *         occur
      */
     public UploadListener getUploadListener() {
         return uploadListener;
@@ -137,7 +137,7 @@ public class UploadSelect extends Component {
     /**
      * Returns the width of the upload select component.
      *
-     * @return the width of the upload select component.
+     * @return the width of the upload select component
      */
     public Extent getWidth() {
         return (Extent)getProperty(PROPERTY_WIDTH);
@@ -147,7 +147,7 @@ public class UploadSelect extends Component {
      * Removes a (the) <code>UploadListener</code> from this 
      * <code>UploadSelect</code>.
      * 
-     * @param l The listener to remove.
+     * @param l the listener to remove
      */
     public void removeUploadListener(UploadListener l) {
         if (l.equals(uploadListener)) {
@@ -158,7 +158,7 @@ public class UploadSelect extends Component {
     /**
      * Sets the height of the upload select component.
      *
-     * @param newValue The new height value.
+     * @param newValue the new height value
      */
     public void setHeight(Extent newValue) {
         setProperty(PROPERTY_HEIGHT,newValue);
@@ -167,8 +167,8 @@ public class UploadSelect extends Component {
     /**
      * Sets the upload listener that will process file uploads when they occur.
      *
-     * @param newValue The <code>UploadListener</code> that will process file 
-     *        uploads.
+     * @param newValue the <code>UploadListener</code> that will process file 
+     *        uploads
      */
     public void setUploadListener(UploadListener newValue) {
         UploadListener oldValue = uploadListener;
@@ -179,7 +179,7 @@ public class UploadSelect extends Component {
     /**
      * Sets the width of the upload select component.
      *
-     * @param newValue The new width value.
+     * @param newValue the new width value
      */
     public void setWidth(Extent newValue) {
         setProperty(PROPERTY_WIDTH,newValue);
@@ -189,7 +189,7 @@ public class UploadSelect extends Component {
      * Sets the text displayed in the &quot;Send&quot; button when it is 
      * disabled.
      * 
-     * @param   string text for the disabled button
+     * @param string text for the disabled button
      */
     public void setDisabledSendButtonText(String string) {
         setProperty(PROPERTY_DISABLED_SEND_TEXT,string);
@@ -199,7 +199,7 @@ public class UploadSelect extends Component {
      * Sets the text displayed in the &quot;Send&quot; button when it is 
      * enabled.
      * 
-     * @param   string text for the enabled button
+     * @param string text for the enabled button
      */
     public void setEnabledSendButtonText(String string) {
         setProperty(PROPERTY_ENABLED_SEND_TEXT,string);
@@ -211,8 +211,8 @@ public class UploadSelect extends Component {
      * (such as certain Web browsers) that do not support the automatic upload 
      * of a file once selected.
      *  
-     * @return  true if the button will be displayed when the component is 
-     *          rendered
+     * @return true if the button will be displayed when the component is 
+     *         rendered
      */
     public boolean isSendButtonDisplayed() {
         Boolean displayed = (Boolean)getProperty(PROPERTY_DISPLAY_SEND_BUTTON);
@@ -229,8 +229,7 @@ public class UploadSelect extends Component {
      * is necessary because of limitations of the View environment (for 
      * example, on some Web browsers) should ignore this hint.  
      * 
-     * @param   b hint that the &quot;Send&quot; button should or should not be 
-     *          displayed
+     * @param b hint that the &quot;Send&quot; button should or should not be displayed
      */
     public void setSendButtonDisplayed(boolean b) {
         setProperty(PROPERTY_DISPLAY_SEND_BUTTON,Boolean.valueOf(b));

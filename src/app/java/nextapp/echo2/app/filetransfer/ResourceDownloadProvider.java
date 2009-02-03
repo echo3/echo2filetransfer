@@ -49,8 +49,8 @@ public class ResourceDownloadProvider extends AbstractDownloadProvider {
      * Creates a new <code>ResourceDownloadProvider</code> to download the 
      * specified resource.
      * 
-     * @param resourceName The name of the resource to download.
-     * @param contentType the content type of the resource.
+     * @param resourceName the name of the resource to download
+     * @param contentType the content type of the resource
      */
     public ResourceDownloadProvider(String resourceName, String contentType) {
         super();
@@ -86,11 +86,9 @@ public class ResourceDownloadProvider extends AbstractDownloadProvider {
     }
     
     /**
-     * Returns true if the file name will be provided (based on the resource 
-     * name).
+     * Returns true if the file name will be provided (based on the resource name).
      * 
-     * @return True if the file name will be provided (based on the resource 
-     * name).
+     * @return True if the file name will be provided (based on the resource name)
      */
     public boolean isFileNameProvided() {
         return fileNameProvided;
@@ -99,7 +97,7 @@ public class ResourceDownloadProvider extends AbstractDownloadProvider {
     /**
      * Sets whether the file name will be provided (based on the resource name).
      * 
-     * @param fileNameProvided True if the file name should be provided.
+     * @param fileNameProvided true if the file name should be provided
      */ 
     public void setFileNameProvided(boolean fileNameProvided) {
         this.fileNameProvided = fileNameProvided;

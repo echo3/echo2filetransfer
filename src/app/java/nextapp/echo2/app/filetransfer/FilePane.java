@@ -11,7 +11,7 @@ implements Pane {
     private DownloadProvider provider;
 
     /**
-     * Creates a new <code>FilePane</code> nd with no download
+     * Creates a new <code>FilePane</code> with no download
      * provider.
      */
     public FilePane() {
@@ -20,7 +20,7 @@ implements Pane {
     
     /**
      * Creates a new <code>Download</code> command with the specified 
-     * prodcuer and active state.
+     * producer and active state.
      *
      * @param provider The <code>DownloadProvider</code> that will provide the
      *        file download.

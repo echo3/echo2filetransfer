@@ -45,11 +45,11 @@ public class UploadEvent extends EventObject {
     /**
      * Creates a new <code>UploadEvent</code>
      *
-     * @param source The source of the event.
-     * @param inputStream An input stream referencing the uploaded file.
-     * @param size The size of the input stream.
-     * @param contentType The content type of the uploaded file.
-     * @param fileName The file name of the uploaded file.
+     * @param source the source of the event
+     * @param inputStream an input stream referencing the uploaded file
+     * @param size the size of the input stream
+     * @param contentType the content type of the uploaded file
+     * @param fileName the file name of the uploaded file
      */
     public UploadEvent(Object source, InputStream inputStream, int size, String contentType, String fileName) {
         super(source);
@@ -63,7 +63,7 @@ public class UploadEvent extends EventObject {
     /**
      * Returns the content type of the uploaded file.
      *
-     * @return The content type of the uploaded file.
+     * @return the content type of the uploaded file
      */
     public String getContentType() {
         return contentType;
@@ -72,7 +72,7 @@ public class UploadEvent extends EventObject {
     /**
      * Returns the file name of the uploaded file.
      *
-     * @return The file name of the uploaded file.
+     * @return the file name of the uploaded file
      */
     public String getFileName() {
         return fileName;
@@ -81,7 +81,7 @@ public class UploadEvent extends EventObject {
     /**
      * Returns an input stream containing the uploaded file.
      *
-     * @return An input stream containing the uploaded file.
+     * @return an input stream containing the uploaded file
      */
     public InputStream getInputStream() {
         return inputStream;
@@ -90,7 +90,7 @@ public class UploadEvent extends EventObject {
     /**
      * Returns the size of the uploaded file, in bytes.
      *
-     * @return The size of the uploaded file.
+     * @return the size of the uploaded file
      */
     public int getSize() {
         return size;

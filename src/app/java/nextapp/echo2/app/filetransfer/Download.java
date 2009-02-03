@@ -57,7 +57,7 @@ public class Download implements Command, RenderIdSupport, Serializable {
     
     /**
      * Creates a new <code>Download</code> command with the specified 
-     * prodcuer and active state.
+     * producer and active state.
      *
      * @param provider The <code>DownloadProvider</code> that will provide the
      *        file download.
