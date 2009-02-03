@@ -40,8 +40,8 @@ import nextapp.echo2.app.componentxml.StyleSheetLoader;
  */
 public class Styles {
     
-    public static final String IMAGE_PATH = "/nextapp/echo2/testapp/filetransfer/resource/image/";
-    public static final String STYLE_PATH = "/nextapp/echo2/testapp/filetransfer/resource/style/";
+    public static final String IMAGE_PATH = "nextapp/echo2/testapp/filetransfer/resource/image/";
+    public static final String STYLE_PATH = "nextapp/echo2/testapp/filetransfer/resource/style/";
  
     public static final ImageReference ICON_24_NO = new ResourceImageReference(IMAGE_PATH + "Icon24No.gif"); 
     public static final ImageReference ICON_24_YES = new ResourceImageReference(IMAGE_PATH + "Icon24Yes.gif");
