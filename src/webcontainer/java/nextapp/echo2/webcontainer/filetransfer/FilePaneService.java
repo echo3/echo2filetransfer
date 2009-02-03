@@ -62,9 +62,8 @@ class FilePaneService implements Service, Serializable {
     /**
      * Creates a URI to execute a specific <code>DownloadProvider</code>
      * 
-     * @param containerInstance the relevant application container instance.
-     * @param downloadId the unique id to retrieve the download from the
-     *        <code>ContainerInstance</code>
+     * @param containerInstance the relevant application container instance
+     * @param componentId the component id
      */
     public String createUri(ContainerInstance containerInstance, String componentId) {
         return containerInstance.getServiceUri(this, URL_PARAMETERS, new String[]{componentId});

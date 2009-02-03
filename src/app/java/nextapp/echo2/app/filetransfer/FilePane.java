@@ -24,8 +24,6 @@ implements Pane {
      *
      * @param provider The <code>DownloadProvider</code> that will provide the
      *        file download.
-     * @param active True if the file should be immediately downloaded by the 
-     *        client.
      */
     public FilePane(DownloadProvider provider) {
         super();
