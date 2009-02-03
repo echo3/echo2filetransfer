@@ -190,6 +190,7 @@
                 Overview="${dir.src.webcontainer}/overview.html"
                 Header="${javadoc.header}">
             <classpath>
+                <pathelement path="${dir.dist.lib}/${jarfile.ft.app}"/>
                 <pathelement path="${echo2.app.lib.jar}"/>
                 <pathelement path="${echo2.webcontainer.lib.jar}"/>
                 <pathelement path="${echo2.webrender.lib.jar}"/>
@@ -211,6 +212,7 @@
                 Header="${javadoc.header}"
                 Private="true">
             <classpath>
+                <pathelement path="${dir.dist.lib}/${jarfile.ft.app}"/>
                 <pathelement path="${echo2.app.lib.jar}"/>
                 <pathelement path="${echo2.webcontainer.lib.jar}"/>
                 <pathelement path="${echo2.webrender.lib.jar}"/>
